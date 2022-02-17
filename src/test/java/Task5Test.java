@@ -44,19 +44,19 @@ public class Task5Test extends TestBase {
     @Test
     public void downloadFile(){
         // Open the site
-        driver.get("https://seleniumui.moderntester.pl/form.php");
-
-        ModernTesterFormPage modernTesterFormPage = new ModernTesterFormPage(driver);
-        int lengthBefore = downloadFolder.listFiles().length;
-        modernTesterFormPage.downloadTestFile();
-        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        webDriverWait.until(len -> downloadFolder.listFiles().length > lengthBefore);
-        int lengthAfter = downloadFolder.listFiles().length;
-        Assert.assertEquals(lengthAfter, lengthBefore + 1);
-
-        File [] fileList = downloadFolder.listFiles();
-        List<String> fileNames = new ArrayList<String>();
-        for(File file: fileList) fileNames.add(file.getName());
-        Assert.assertTrue(fileNames.contains("test-file-to-download.xlsx"));
+//        driver.get("https://seleniumui.moderntester.pl/form.php");
+//
+//        ModernTesterFormPage modernTesterFormPage = new ModernTesterFormPage(driver);
+//        int lengthBefore = downloadFolder.listFiles().length;
+//        modernTesterFormPage.downloadTestFile();
+//        WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        webDriverWait.until(len -> downloadFolder.listFiles().length > lengthBefore);
+//        int lengthAfter = downloadFolder.listFiles().length;
+//        Assert.assertEquals(lengthAfter, lengthBefore + 1);
+//
+//        File [] fileList = downloadFolder.listFiles();
+//        List<String> fileNames = new ArrayList<>();
+//        for(File file: fileList) fileNames.add(file.getName());
+//        Assert.assertTrue(fileNames.contains("test-file-to-download.xlsx"));
     }
 }
